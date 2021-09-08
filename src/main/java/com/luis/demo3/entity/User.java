@@ -3,6 +3,7 @@ package com.luis.demo3.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -15,4 +16,6 @@ public class User {
     private String name;
     @Column(name = "email", nullable = false, unique = true)
     private String email;
+    @OneToMany(mappedBy = "id")
+    private List<Phone> phones;
 }

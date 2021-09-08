@@ -13,4 +13,7 @@ public class Phone {
     private Long id;
     @Column(name = "number", nullable = false)
     private Integer number;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 }
