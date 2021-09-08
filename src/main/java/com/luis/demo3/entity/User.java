@@ -18,4 +18,7 @@ public class User {
     private String email;
     @OneToMany(mappedBy = "id")
     private List<Phone> phones;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id")
+    private Card card;
 }
